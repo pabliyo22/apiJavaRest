@@ -1,0 +1,23 @@
+server: 
+  port: 8080
+
+logging:
+  file: logPath/nameoflogfile.log
+
+spring:
+  jpa:
+    properties:
+      hibernate:
+        temp:
+          use_jdbc_metadata_defaults: false
+      database-platform: org.hibernate.dialect.PostgreSQL9Dialect
+    database: POSTGRESQL
+    show-sql: true
+    hibernate:
+      ddl-auto: validate
+  datasource:
+    platform: postgres
+    url: jdbc:postgresql://127.0.0.1:5432/db_promo
+    username: postgres
+    password: postgres
+    driverClassName: org.postgresql.Driver
