@@ -1,4 +1,4 @@
-package promo;
+package promo.entity;
 
 import java.sql.Timestamp;
 import java.util.List;
@@ -20,20 +20,15 @@ public class PromoRules{
     @Id
     private Integer id;
 
-    
-    private  String formula;
-
-    private  String json;
 
     @OneToOne()
     @JoinColumn(name="promo_id", nullable=false)
     private  Promo promoId;
 
-    @OneToMany(
-        mappedBy = "promoRule"
-    )
+    private  String formula;
 
-    private List<Rule> rules = new ArrayList<>();
+    private  String json;
+
 
     public Integer getId() {
         return this.id;
@@ -67,13 +62,6 @@ public class PromoRules{
         this.promoId = promoId;
     }
 
-    public List<Rule> getRules() {
-        return this.rules;
-    }
-
-    public void setRules(List<Rule> rules) {
-        this.rules = rules;
-    }
 
     
 }

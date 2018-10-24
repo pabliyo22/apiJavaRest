@@ -1,4 +1,5 @@
-package promo;
+package promo.entity;
+
 
 import java.sql.Timestamp;
 import java.util.List;
