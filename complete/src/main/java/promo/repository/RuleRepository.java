@@ -9,7 +9,7 @@ import promo.entity.*;
 
 
 @RepositoryRestResource(collectionResourceRel = "rules", path = "rule")
-/**  esta notacion  publica el repositorio **/
+
 public interface RuleRepository extends PagingAndSortingRepository<Rule, Integer> {
 
 	List<Rule> findByPromoRule(@Param("promoRule") Integer name);

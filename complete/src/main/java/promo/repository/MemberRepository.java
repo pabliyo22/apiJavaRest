@@ -9,7 +9,6 @@ import promo.entity.*;
 
 
 @RepositoryRestResource(collectionResourceRel = "members", path = "member")
-/**  esta notacion  publica el repositorio **/
 public interface MemberRepository extends PagingAndSortingRepository<Member, Integer> {
 
 	List<Member> findByExternalSocioId(@Param("externalSocioId") Long externalSocioId);
